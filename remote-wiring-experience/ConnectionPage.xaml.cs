@@ -262,6 +262,9 @@ namespace remote_wiring_experience
                         case "DfRobot":
                             App.Connection = new DfRobotBleSerial(device);
                             break;
+                        case "RedBearLab":
+                            App.Connection = new RedBearLabBleSerial(device);
+                            break;
                     }
                     break;
 
