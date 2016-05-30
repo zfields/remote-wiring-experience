@@ -83,7 +83,7 @@ namespace remote_wiring_experience
                     DevicesText.Visibility = Visibility.Visible;
                     NetworkHostNameTextBox.IsEnabled = false;
                     NetworkPortTextBox.IsEnabled = false;
-                    BaudRateComboBox.IsEnabled = true;
+                    BaudRateComboBox.IsEnabled = false;
                     NetworkHostNameTextBox.Text = "";
                     NetworkPortTextBox.Text = "";
                     BLESchemaComboBox.IsEnabled = false;
@@ -95,7 +95,7 @@ namespace remote_wiring_experience
                     task = BluetoothSerial.listAvailableDevicesAsync().AsTask<DeviceInformationCollection>( cancelTokenSource.Token );
                     break;
 
-                case "BLE":
+                case "Bluetooth LE":
                     ConnectionList.Visibility = Visibility.Visible;
                     DevicesText.Visibility = Visibility.Visible;
                     NetworkHostNameTextBox.IsEnabled = false;
@@ -246,7 +246,7 @@ namespace remote_wiring_experience
                     App.Connection = new BluetoothSerial( device );
                     break;
 
-                case "BLE":
+                case "Bluetooth LE":
 
                     // populate telemetry properties about this connection attempt
                     App.Telemetry.Context.Properties["connection.name"] = string.Format("{0:X}", device.Name.GetHashCode());
@@ -259,7 +259,7 @@ namespace remote_wiring_experience
                         case "Curie":
                             App.Connection = new CurieBleSerial(device);
                             break;
-                        case "dfRobot":
+                        case "DfRobot":
                             App.Connection = new DfRobotBleSerial(device);
                             break;
                     }

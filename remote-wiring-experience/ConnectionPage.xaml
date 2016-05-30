@@ -83,11 +83,11 @@
                         <StackPanel Margin="4, 0, 0, 0" Orientation="Horizontal" HorizontalAlignment="Stretch">
                             <StackPanel Margin="0,0,20,0" Orientation="Vertical" HorizontalAlignment="Stretch">
                                 <TextBlock FontSize="14" Text="Connection" />
-                                <ComboBox Margin="0, 5, 0, 0" Height="32" Width="150" x:Name="ConnectionMethodComboBox" HorizontalAlignment="Stretch" FontSize="14" SelectedIndex="0">
+                                <ComboBox Margin="0, 5, 0, 0" Height="32" Width="150" x:Name="ConnectionMethodComboBox" HorizontalAlignment="Stretch" FontSize="14" SelectedIndex="3">
+                                    <x:String>Bluetooth LE</x:String>
                                     <x:String>Bluetooth</x:String>
-                                    <x:String>USB</x:String>
                                     <x:String>Network</x:String>
-                                    <x:String>BLE</x:String>
+                                    <x:String>USB</x:String>
                                 </ComboBox>
                             </StackPanel>
                             <StackPanel Margin="-10,0,0,0" x:Name="BaudRateStack" Orientation="Vertical" HorizontalAlignment="Stretch">
@@ -124,8 +124,9 @@
                             <StackPanel Margin="0,0,0,0" x:Name="BLESchemaSelections" Orientation="Vertical" HorizontalAlignment="Stretch">
                                 <TextBlock FontSize="14" Text="BLE Serial Schema" />
                                 <ComboBox Margin="-10, 5, 0, 0" Height="32" Width="100" x:Name="BLESchemaComboBox" HorizontalAlignment="Stretch" FontSize="14" SelectedIndex="0">
-                                    <x:String>dfRobot</x:String>
                                     <x:String>Curie</x:String>
+                                    <x:String>DfRobot</x:String>
+                                    <x:String>RedBearLab</x:String>
                                 </ComboBox>
                             </StackPanel>
                         </StackPanel>
